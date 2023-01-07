@@ -5,7 +5,7 @@ This repository was inspired by [Storytelling with Data](https://www.storytellin
 2022 was a big year for me.
 I moved from the country side in Israel to the city of Barcelona (Catalonia, Spain). While still getting used to everything about living in the city, learning the language(s), meeting new people and finding my place, one thing that occurred immediately is the change in my movement behviour. Barcelona has one of the best public transport systems in the world, and is extremely walkable. In Israel, like many Israelies, I HAD to have a car and this became my main method of transportation. So the move to Barcelona made me walk a lot more again, and use public transport rathee than drive a car. This is a huge life style improvement for me! I am now a proud non-owner of a car :tada:.
 
-[plot of transport method distances in 2022](https://github.com/shirasal/summary_2022/blob/main/plots/transport_2022.png)
+![plot of transport method distances in 2022](https://github.com/shirasal/summary_2022/blob/main/plots/transport_2022.png)
 
 The remarkable change from almost exclusive car use to public transport and walking is well-seen in the plot above.
 In August we[^*] had some car-travel with friends in Costa Brava. In September and October my brother visited us and we traveled with him outside of the city a bit. We also just moved to a new place around this time and used public transport a lot for shopping for the new place.
