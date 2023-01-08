@@ -1,13 +1,16 @@
 library(tidyverse)
 
-transport <- read_csv("data/transport_2022.csv")
+transport <- read_csv("data/transport_2022.csv") 
+
+transport
 
 (
   tran_plot <- transport %>% 
     pivot_longer(cols = January:December, names_to = "month", values_to = "km") %>% 
     mutate(month = factor(month, levels = month.name)) %>% 
+    mutate(month_lab = factor(str_sub(month, 1, 3), levels = month.abb)) %>% 
     filter(method != "Fly") %>% 
-    ggplot() + aes(x = month, y = km, fill = method)
+    ggplot() + aes(x = month_lab, y = km, fill = method)
   + geom_bar(stat = "identity", position = "dodge")
   + ggthemes::scale_fill_wsj(palette = "rgby")
   + geom_vline(aes(xintercept = 6), linetype = "dotted", col = "gray", lwd = 1.5)
