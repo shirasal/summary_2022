@@ -121,7 +121,7 @@ new_tran_bar <- transport %>%
   facet_wrap(~method, scale = "free_y", ncol = 1) +
   labs(x = "", y = "Distance [KM]", fill = "Method") + 
   theme(strip.background = element_blank(),
-        strip.text.x = element_blank(),
+        strip.text = element_text(face = "bold", just = 1, size = 11),
         panel.grid = element_blank(),
         panel.background = element_blank(),
         legend.position = "bottom", legend.title = element_blank(), legend.text = element_text(face = "bold"))
@@ -144,7 +144,8 @@ new_tran_line <- transport %>%
         panel.grid = element_blank(),
         panel.background = element_rect(colour = 'black', fill = 'white', linetype='solid'))
 
-new_plots <- ggpubr::ggarrange(new_tran_bar, new_tran_line, ncol = 2, common.legend = TRUE, legend = "bottom") + 
+new_plots <- ggpubr::ggarrange(new_tran_bar, new_tran_line, 
+                               ncol = 2, common.legend = TRUE, legend = "bottom") + 
   theme(legend.title = element_blank())
 
 new_plots
