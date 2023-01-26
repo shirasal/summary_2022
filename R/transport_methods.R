@@ -121,7 +121,7 @@ new_tran_bar <- transport %>%
   facet_wrap(~method, scale = "free_y", ncol = 1) +
   labs(x = "", y = "Distance [KM]", fill = "Method") + 
   theme(strip.background = element_blank(),
-        strip.text = element_text(face = "bold", just = 1, size = 11),
+        strip.text = element_text(face = "bold", hjust = 1, colour = "darkgray"),
         panel.grid = element_blank(),
         panel.background = element_blank(),
         legend.position = "bottom", legend.title = element_blank(), legend.text = element_text(face = "bold"))
@@ -149,5 +149,5 @@ new_plots <- ggpubr::ggarrange(new_tran_bar, new_tran_line,
   theme(legend.title = element_blank())
 
 new_plots
-ggsave(plot = new_plots, filename = "plots/new_transport_2022.png", device = "png", scale = c(1.7,1))
+ggsave(plot = new_plots, filename = "plots/new_transport_2022.png", device = "png", scale = c(1.7,1), bg = "white")
 
